@@ -8,6 +8,8 @@ import { SharedModule } from './shared/shared.module';
 import { AppRouting } from './app.routing';
 import { AppComponent } from './app.component';
 
+import { SpaceshipsModule } from './spaceships/spaceships.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,6 +21,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     AppRouting,
     SharedModule.forRoot(),
+    SpaceshipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
