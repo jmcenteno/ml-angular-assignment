@@ -9,3 +9,7 @@
 
 // import theme-specific styles
 @import './themes/flatly/bootswatch';
+
+body {
+    padding-top: $navbar-height;
+}
