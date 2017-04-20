@@ -23,14 +23,18 @@ export class SpaceshipsService {
 
     this.http.get(`${API_URL}/spaceships`)
       .subscribe(response => {
-        this.spaceships$.next(response.json().products || []);
+        const data: Spaceship[] = response.json().products || [];
+        this.spaceships$.next(data.map((item: Spaceship, i) => {
+          item.id = i;
+          return item;
+        }));
       });
 
   }
 
-  getSpaceshipByName(name: String): Observable<Spaceship> {
+  getSpaceshipById(id: Number): Observable<Spaceship> {
 
-    return _.find(this.spaceships$, { name: name });
+    return _.find(this.spaceships$, { id: id });
 
   }
 

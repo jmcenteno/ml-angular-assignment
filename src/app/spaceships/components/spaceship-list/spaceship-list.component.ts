@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import * as _ from 'lodash';
+
+import { SpaceshipsService } from '../../services/spaceships/spaceships.service';
+import { Spaceship } from '../../services/spaceships/spaceship';
 
 @Component({
   selector: 'app-spaceship-list',
@@ -7,9 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpaceshipListComponent implements OnInit {
 
-  constructor() { }
+  products: Spaceship[] = [];
+
+  constructor(
+    private spaceshipsService: SpaceshipsService) { }
 
   ngOnInit() {
+
+    this.spaceshipsService.spaceships.subscribe(data => {
+      this.products = data || [];
+    });
+
+    this.spaceshipsService.getAllSpaceships();
+
   }
 
 }
