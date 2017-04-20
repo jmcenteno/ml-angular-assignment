@@ -2,13 +2,13 @@
 
 // IMPORTARNT!!!
 // variables MUST be imported here to override bootstrap variables
-@import './themes/flatly/variables';
+@import './themes/cosmo/variables';
 
 // import boostrap and styles from other 3rd-party libraries
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
 // import theme-specific styles
-@import './themes/flatly/bootswatch';
+@import './themes/cosmo/bootswatch';
 
 body {
     padding-top: $navbar-height + 20;
