@@ -1,3 +1,8 @@
-<p>
-  spaceship-details works!
-</p>
+<div>
+  <app-product-details-view 
+    *ngIf="product"
+    [product]="product" 
+    [category]="product.class" 
+    [specs]="specs">
+  </app-product-details-view>
+</div>
