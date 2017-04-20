@@ -1,0 +1,31 @@
+<div>
+
+  <div class="well">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="form-inline">
+          <label class="control-label">Sort By:</label>
+          <select class="form-control" [(ngModel)]="sortBy" (change)="sortProducts()">
+            <option value="name">Alphabetically</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-xs-6 text-right">
+        <div class="btn-group" role="group" aria-label="View Options">
+          <button type="button" class="btn" [ngClass]="mode === 'grid' ? 'btn-primary' : 'btn-default'" (click)="mode = 'grid'">
+            <i class="glyphicon glyphicon-th-large"></i>
+          </button>
+          <button type="button" class="btn" [ngClass]="mode === 'list' ? 'btn-primary' : 'btn-default'" (click)="mode = 'list'">
+            <i class="glyphicon glyphicon-th-list"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-product-grid [products]="products" *ngIf="mode == 'grid'"></app-product-grid>
+  <app-product-list [products]="products" *ngIf="mode == 'list'"></app-product-list>
+
+</div>

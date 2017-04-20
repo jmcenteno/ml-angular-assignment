@@ -1,11 +1,11 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-products-grid',
-  templateUrl: './products-grid.component.html',
-  styleUrls: ['./products-grid.component.scss']
+  selector: 'app-product-grid',
+  templateUrl: './grid.component.html',
+  styleUrls: ['./grid.component.scss']
 })
-export class ProductsGridComponent implements OnInit, OnChanges {
+export class GridComponent implements OnInit, OnChanges {
 
   @Input() products: any[] = [];
 

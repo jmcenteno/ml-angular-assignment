@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router'; 
 
-import { ProductsToolbarComponent } from './components/products-toolbar/products-toolbar.component';
-import { ProductsGridComponent } from './components/products-grid/products-grid.component';
-import { ProductsListComponent } from './components/products-list/products-list.component';
+import { ProductListViewComponent } from './components/product-list-view/product-list-view.component';
+import { ProductDetailsViewComponent } from './components/product-details-view/product-details-view.component';
+import { GridComponent } from './components/grid/grid.component';
+import { ListComponent } from './components/list/list.component';
 
 @NgModule({
   imports: [
@@ -14,12 +15,11 @@ import { ProductsListComponent } from './components/products-list/products-list.
     ReactiveFormsModule,
     RouterModule
   ],
-  declarations: [ProductsToolbarComponent, ProductsGridComponent, ProductsListComponent],
+  declarations: [ProductListViewComponent, ProductDetailsViewComponent, GridComponent, ListComponent],
   providers: [],
   exports: [
-    ProductsToolbarComponent,
-    ProductsGridComponent,
-    ProductsListComponent
+    ProductListViewComponent,
+    ProductDetailsViewComponent
   ]
 })
 export class ProductsModule { }
