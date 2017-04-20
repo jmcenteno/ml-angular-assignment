@@ -1,6 +1,6 @@
-<div>
+<div class="product-list">
 
-  <div class="well">
+  <div class="well" *ngIf="products">
     <div class="row">
       <div class="col-xs-6">
         <div class="form-inline">
@@ -25,7 +25,11 @@
     </div>
   </div>
 
-  <app-product-grid [products]="products" *ngIf="mode == 'grid'"></app-product-grid>
-  <app-product-list [products]="products" *ngIf="mode == 'list'"></app-product-list>
+  <app-product-grid [products]="products" *ngIf="products && mode == 'grid'"></app-product-grid>
+  <app-product-list [products]="products" *ngIf="products && mode == 'list'"></app-product-list>
+
+  <div class="text-center" *ngIf="!products">
+    <img src="assets/img/spinner.svg" />
+  </div>
 
 </div>

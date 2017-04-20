@@ -18,7 +18,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     RouterModule,
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent],
+    PageNotFoundComponent
+  ],
 })
 export class SharedModule {
 
