@@ -11,5 +11,5 @@
 @import './themes/flatly/bootswatch';
 
 body {
-    padding-top: $navbar-height;
+    padding-top: $navbar-height + 20;
 }
