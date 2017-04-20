@@ -1,0 +1,27 @@
+.panel {
+    cursor: pointer;
+    position: relative;
+
+    figure {
+        overflow: hidden;
+        max-height: 375px;
+        margin-bottom: 15px;
+        
+        img {
+            transform: scale(1);
+            transition: 300ms ease-in-out;
+            filter: grayscale(0%);
+        }
+
+    }
+
+    &:hover figure img {
+        transform: scale(1.3);
+    }
+
+    img {
+        width: 100%;
+        filter: grayscale(100%);
+    }
+
+}
