@@ -1,17 +1,37 @@
+@import '../../../../scss/themes/flatly/variables';
+
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
 .navbar-brand {
     font-family: 'Fredoka One', cursive;
     font-size: 24px;
     line-height: 24px;
-    padding: 20px 15px;
-    margin-right: 20px;
+    padding: 20px;
+    color: #fff !important;
+    background-color: $navbar-default-link-active-bg !important;
+    text-shadow: none;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+        text-shadow:    0 0 5px #fff, 
+                        0 0 10px #fff, 
+                        0 0 15px #fff, 
+                        0 0 20px $brand-success, 
+                        0 0 35px $brand-success, 
+                        0 0 40px $brand-success, 
+                        0 0 50px $brand-success, 
+                        0 0 75px $brand-success;
+    }
 
     .tagline {
-        font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: $font-family-sans-serif;
         font-size: 12px;
         font-weight: 100;
         display: block;
     }
 
+}
+
+.navbar-nav li .active {
+    background-color: rgba($navbar-default-link-active-bg, 0.4);
 }
