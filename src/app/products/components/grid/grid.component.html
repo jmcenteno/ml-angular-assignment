@@ -4,7 +4,7 @@
       
       <div class="panel panel-default">
         <figure>
-          <img [attr.src]="product.picture || 'assets/img/no-img.jpg'" />
+          <img [attr.src]="product.picture || 'http://facetheforce.today/random/400?r=' + product.id" />
         </figure>
         <div class="panel-body">
           <h3 class="panel-title">{{product.name}}</h3>

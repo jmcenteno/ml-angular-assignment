@@ -2,7 +2,7 @@
   <hr *ngIf="i"/>
   <div class="media">
     <div class="media-left">
-      <img [attr.src]="product.picture || 'assets/img/no-img.jpg'" />
+      <img [attr.src]="product.picture || 'http://facetheforce.today/random/400?r=' + product.id" />
     </div>
     <div class="media-body">
       <h3 class="media-heading">{{product.name}}</h3>
