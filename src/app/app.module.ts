@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { SharedModule } from './shared/shared.module';
@@ -15,7 +14,6 @@ import { SpaceshipsModule } from './spaceships/spaceships.module';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
     AppRouting,
     SharedModule.forRoot(),
