@@ -19,10 +19,18 @@ export class SpaceshipListComponent implements OnInit {
   ngOnInit() {
 
     this.spaceshipsService.spaceships.subscribe(data => {
-      this.products = data || [];
-    });
 
-    this.spaceshipsService.getAllSpaceships();
+      if (!data) {
+
+        this.spaceshipsService.getAllSpaceships();
+
+      } else {
+
+        this.products = data || [];
+
+      }
+
+    });
 
   }
 
