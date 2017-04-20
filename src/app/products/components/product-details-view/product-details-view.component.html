@@ -1,3 +1,46 @@
-<p>
-  product-details-view works!
-</p>
+<div class="product-details">
+  <div class="container">
+  
+    <div class="page-header">
+      <h1>
+        <small>{{category}}</small>
+        <br/>
+        {{product.name}}
+      </h1>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-7">
+        
+        <section>
+          <img [attr.src]="product.picture || 'http://facetheforce.today/random/400?r=1'" class="product-image" />
+          <p>Thrawn jar skywalker antilles hutt jabba ventress hutt tatooine. Darth jinn skywalker grievous darth. Qui-gon amidala luuke jabba windu. Mandalore utapau calamari windu amidala lars ahsoka antilles han. Kamino antilles antilles jinn greedo cade skywalker. Chewbacca moff cade kessel darth utapau hutt skywalker twi'lek. Luke yavin darth calamari qui-gonn skywalker wedge ahsoka. Watto tatooine palpatine droid k-3po darth. Organa kashyyyk antilles solo padmé coruscant chewbacca k-3po. Organa fett moff obi-wan hutt dooku.</p>
+        </section>
+
+      </div>
+      <div class="col-sm-5">
+
+        <small>Price</small>
+        <br/>
+        <strong class="product-price">{{product.price}}</strong>
+        <br/>
+
+        <aside>
+          <h3>Tech Specs</h3>
+          <ng-template ngFor let-spec [ngForOf]="specs" let-i="index">
+            <div class="row">
+              <div class="col-xs-5">
+                <strong>{{spec.label}}</strong>
+              </div>
+              <div class="col-xs-7">
+                <p>{{spec.value || 'N/A'}}</p>
+              </div>
+            </div>
+          </ng-template>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+</div>

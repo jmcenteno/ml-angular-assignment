@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-details-view',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-details-view.component.scss']
 })
 export class ProductDetailsViewComponent implements OnInit {
+
+  @Input() product: any;
+  @Input() category: String;
+  @Input() specs: any[];
 
   constructor() { }
 
