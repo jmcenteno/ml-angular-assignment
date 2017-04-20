@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { APP_NAME } from '../../../app.config';
+import { APP_NAME, APP_TAGLINE } from '../../../app.config';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,7 @@ import { APP_NAME } from '../../../app.config';
 export class HeaderComponent implements OnInit {
 
   appName: String = APP_NAME;
+  appTagline: String = APP_TAGLINE;
 
   constructor() { }
 
