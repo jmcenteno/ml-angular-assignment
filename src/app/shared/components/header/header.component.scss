@@ -1,4 +1,4 @@
-@import '../../../../scss/themes/flatly/variables';
+@import '../../../../scss/themes/yeti/variables';
 
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
@@ -7,9 +7,9 @@
     font-size: 24px;
     line-height: 24px;
     padding: 20px;
-    color: #fff !important;
+    //color: #fff !important;
     text-shadow: none;
-    transition: all 150ms ease-in-out;
+    transition: text-shadow 150ms ease-in-out;
 
     &:hover {
         text-shadow:    0 0 5px #fff, 

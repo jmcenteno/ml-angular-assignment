@@ -2,16 +2,15 @@
 
 // IMPORTARNT!!!
 // variables MUST be imported here to override bootstrap variables
-@import './themes/flatly/variables';
+@import './variables';
+@import './themes/yeti/variables';
 
 // import boostrap and styles from other 3rd-party libraries
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
-
-$fa-font-path: '../../node_modules/font-awesome/fonts' !default;
 @import '../../node_modules/font-awesome/scss/font-awesome';
 
 // import theme-specific styles
-@import './themes/flatly/bootswatch';
+@import './themes/yeti/bootswatch';
 
 body {
     padding-top: $navbar-height + 20;
