@@ -15,6 +15,9 @@ export class ProductListViewComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
+
+    window.scroll(0, 0);
+
   }
 
   ngOnChanges() {
