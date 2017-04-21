@@ -2,7 +2,7 @@ import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import * as _ from 'lodash';
 
 @Component({
-  selector: 'app-product-list-view',
+  selector: 'app-products-list-view',
   templateUrl: './product-list-view.component.html',
   styleUrls: ['./product-list-view.component.scss']
 })

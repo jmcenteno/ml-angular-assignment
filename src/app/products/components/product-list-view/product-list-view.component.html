@@ -25,8 +25,8 @@
     </div>
   </div>
 
-  <app-product-grid [products]="products" *ngIf="products && mode == 'grid'"></app-product-grid>
-  <app-product-list [products]="products" *ngIf="products && mode == 'list'"></app-product-list>
+  <app-products-grid [products]="products" *ngIf="products && mode == 'grid'"></app-products-grid>
+  <app-products-list [products]="products" *ngIf="products && mode == 'list'"></app-products-list>
 
   <div class="text-center" *ngIf="!products">
     <img src="assets/img/spinner.svg" />

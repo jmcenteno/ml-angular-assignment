@@ -1,18 +1,9 @@
 <ng-template ngFor let-row [ngForOf]="grid">
   <div class="row">
-    <div class="col-sm-4" *ngFor="let product of row">
-      
-      <div class="panel panel-default">
-        <figure>
-          <img [attr.src]="product.picture || 'http://facetheforce.today/random/400?r=' + product.id" />
-        </figure>
-        <div class="panel-body">
-          <h3 class="panel-title">{{product.name}}</h3>
-          <p class="lead">{{product.price || 'N/A'}}</p>
-          <a [routerLink]="product.id" class="btn btn-primary btn-block">View Details</a>
-        </div>
+    <ng-template ngFor let-product [ngForOf]="row" let-i="index">
+      <div class="col-sm-4">
+        <app-products-grid-item [product]="product" [delay]="i*50"></app-products-grid-item>
       </div>
-
-    </div>
+    </ng-template>
   </div>
 </ng-template>

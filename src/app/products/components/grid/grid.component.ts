@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-product-grid',
+  selector: 'app-products-grid',
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.scss']
 })

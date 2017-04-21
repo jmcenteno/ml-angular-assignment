@@ -23,11 +23,18 @@ export class SpaceshipsService {
 
     this.http.get(`${API_URL}/spaceships`)
       .subscribe(response => {
+
         const data: Spaceship[] = response.json().products || [];
+
         this.spaceships$.next(data.map((item: Spaceship, i) => {
+
           item.id = i;
+          item.picture = 'http://facetheforce.today/random/300?r=' + i;
+
           return item;
+
         }));
+
       });
 
   }

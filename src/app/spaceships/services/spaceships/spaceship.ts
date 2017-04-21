@@ -1,10 +1,11 @@
 import { TechSpecs } from './tech-specs';
 
 export class Spaceship {
-    id: Number;
-    name: String;
-    price: String;
-    manufacturer: String;
-    class: String;
+    id: number;
+    name: string;
+    price: string;
+    manufacturer: string;
+    class: string;
+    picture: string;
     techspecs: TechSpecs;
 }
