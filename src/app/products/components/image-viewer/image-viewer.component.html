@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-10 col-md-push-2">
+    
+    <img [attr.src]="images[current] || 'assets/img/no-img.jpg'" class="current-image hidden-xs hidden-sm" />
+    <img [attr.src]="images[0] || 'assets/img/no-img.jpg'" class="current-image hidden-md hidden-lg" />
+
+  </div>
+  <div class="col-md-2 col-md-pull-10">
+    
+    <div class="thumbnails hidden-xs hidden-sm">
+      <ng-template ngFor let-img [ngForOf]="images" let-i="index">
+        <a (click)="current = i">
+          <img [attr.src]="img || 'assets/img/no-img.jpg'" class="img-thumbnail" [ngClass]="{ 'active': i === current }" />
+        </a>
+      </ng-template>
+    </div>
+
+  </div>
+</div>

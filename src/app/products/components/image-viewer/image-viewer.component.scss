@@ -1,0 +1,19 @@
+@import '../../../../scss/themes/yeti/variables';
+
+.current-image {
+    width: 100%;
+}
+
+.thumbnails a {
+    cursor: pointer;
+    
+    img {
+        margin-bottom: 8px;
+
+        &.active {
+            border-width: 2px;
+            border-color: $brand-primary;
+        }
+    }
+
+}

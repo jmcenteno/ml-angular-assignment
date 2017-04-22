@@ -10,6 +10,7 @@ import { GridComponent } from './components/grid/grid.component';
 import { GridItemComponent } from './components/grid-item/grid-item.component';
 import { ListComponent } from './components/list/list.component';
 import { ListItemComponent } from './components/list-item/list-item.component';
+import { ImageViewerComponent } from './components/image-viewer/image-viewer.component';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { ListItemComponent } from './components/list-item/list-item.component';
     RouterModule,
     BrowserAnimationsModule
   ],
-  declarations: [ProductListViewComponent, ProductDetailsViewComponent, GridComponent, GridItemComponent, ListComponent, ListItemComponent],
+  declarations: [ProductListViewComponent, ProductDetailsViewComponent, GridComponent, GridItemComponent, ListComponent, ListItemComponent, ImageViewerComponent],
   providers: [],
   exports: [
     ProductListViewComponent,
