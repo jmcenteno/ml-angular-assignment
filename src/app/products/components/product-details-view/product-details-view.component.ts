@@ -11,6 +11,8 @@ export class ProductDetailsViewComponent implements OnInit {
   @Input() category: string;
   @Input() specs: any[];
 
+  currentTab: number = 0;
+
   constructor() { }
 
   ngOnInit() {

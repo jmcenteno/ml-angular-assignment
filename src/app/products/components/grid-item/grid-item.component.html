@@ -1,6 +1,6 @@
 <div class="panel panel-default" [@panelState]="state">
   <figure>
-    <img [attr.src]="product.picture || 'assets/img/no-img.jpg'" />
+    <img [attr.src]="product.pictures[0] || 'assets/img/no-img.jpg'" class="img-responsive" />
   </figure>
   <div class="panel-body">
     <h3 class="panel-title">{{product.name}}</h3>

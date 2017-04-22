@@ -14,20 +14,54 @@
       <div class="col-sm-7">
         
         <section>
+          
           <div class="product-image">
             <app-products-image-viewer [images]="product.pictures"></app-products-image-viewer>
           </div>
-          <h3>Description:</h3>
-          <p>{{product.description}}</p>
+          
+          <div class="product-price visible-xs">
+            <small>Price</small>
+            <br/>
+            <strong>{{product.price || 'N/A'}}</strong>
+            <br/>
+            <br/>
+            <br/>
+          </div>
+          
+          <ul class="nav nav-tabs">
+            <li role="presentation" [ngClass]="{ 'active': (currentTab === 0) }">
+              <a (click)="currentTab = 0">Description</a>
+            </li>
+            <li role="presentation" [ngClass]="{ 'active': currentTab === 1 }">
+              <a (click)="currentTab = 1">Reviews</a>
+            </li>
+          </ul>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane" [ngClass]="{ 'active': (currentTab === 0) }">
+              <p>{{product.description}}</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" [ngClass]="{ 'active': currentTab === 1 }">
+              <ng-template ngFor let-review [ngForOf]="product.reviews" *ngIf="product.reviews.length">
+
+              </ng-template>
+              <div *ngIf="!product.reviews.length">
+                <p>There are no reviews for this product.</p>
+              </div>
+            </div>
+          </div>
+
         </section>
 
       </div>
       <div class="col-sm-5">
 
-        <small>Price</small>
-        <br/>
-        <strong class="product-price">{{product.price}}</strong>
-        <br/>
+        <div class="product-price hidden-xs">
+          <small>Price</small>
+          <br/>
+          <strong>{{product.price || 'N/A'}}</strong>
+          <br/>
+        </div>
 
         <aside>
           <h3>Tech Specs:</h3>

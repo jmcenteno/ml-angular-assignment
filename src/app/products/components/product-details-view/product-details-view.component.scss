@@ -1,4 +1,20 @@
 .product-price {
-    font-size: 2.6em;
-    font-weight: 100;
+
+    strong {
+        font-size: 2.6em;
+        font-weight: 100;
+    }
+    
+}
+
+.product-image {
+    margin-bottom: 40px;
+}
+
+.nav-tabs li a {
+    cursor: pointer;
+}
+
+.tab-content {
+    padding: 20px 0;
 }
