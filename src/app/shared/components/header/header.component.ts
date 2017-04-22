@@ -9,8 +9,9 @@ import { APP_NAME, APP_TAGLINE } from '../../../app.config';
 })
 export class HeaderComponent implements OnInit {
 
-  appName: String = APP_NAME;
-  appTagline: String = APP_TAGLINE;
+  appName: string = APP_NAME;
+  appTagline: string = APP_TAGLINE;
+  collapsed: boolean = true;
 
   constructor() { }
 

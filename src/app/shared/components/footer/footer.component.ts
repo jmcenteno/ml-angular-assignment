@@ -9,8 +9,8 @@ import { APP_NAME } from '../../../app.config';
 })
 export class FooterComponent implements OnInit {
 
-  appName: String = APP_NAME;
-  year: Number = (new Date()).getFullYear();
+  appName: string = APP_NAME;
+  year: number = (new Date()).getFullYear();
 
   constructor() { }
 

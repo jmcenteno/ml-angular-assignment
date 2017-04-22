@@ -1,13 +1,30 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-import { FadeInUp } from '../../products.animations';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 @Component({
   selector: 'app-products-list-item',
   templateUrl: './list-item.component.html',
   styleUrls: ['./list-item.component.scss'],
   animations: [
-    FadeInUp('itemState', 300)
+    trigger('itemState', [
+      state('inactive', style({
+        opacity: 0,
+        transform: 'translateY(120%)'
+      })),
+      state('active', style({
+        opacity: 1,
+        transform: 'translateY(0)'
+      })),
+      transition('inactive => active', [
+        animate('300ms ease-out')
+      ])
+    ])
   ]
 })
 export class ListItemComponent implements OnInit {
@@ -16,16 +33,14 @@ export class ListItemComponent implements OnInit {
   @Input() delay: number;
   @Input() index: number;
 
-  constructor() {
+  state: string = 'inactive';
 
-    this['state'] = 'inactive';
-
-  }
+  constructor() { }
 
   ngOnInit() {
 
     this.sleep(this.delay).then(() => {
-      this['state'] = 'active';
+      this.state = 'active';
     });
 
   }
