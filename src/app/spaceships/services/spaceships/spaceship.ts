@@ -1,11 +1,7 @@
+import { Product } from '../../../products/product';
 import { TechSpecs } from './tech-specs';
 
-export class Spaceship {
-    id: number;
-    name: string;
-    price: string;
+export class Spaceship extends Product {
     manufacturer: string;
-    class: string;
-    picture: string;
-    techspecs: TechSpecs;
+    specs: TechSpecs;
 }
