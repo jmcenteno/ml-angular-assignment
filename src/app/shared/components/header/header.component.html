@@ -14,7 +14,7 @@
       </a>
     </div>
 
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" [ngClass]="{ 'in': !collapsed }">
       <ul class="nav navbar-nav">
         <li><a routerLink="spaceships" routerLinkActive="active">Spaceships</a></li>
       </ul>
