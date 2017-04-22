@@ -9,8 +9,8 @@ import * as _ from 'lodash';
 export class ProductListViewComponent implements OnInit, OnChanges {
 
   @Input() products: any[] = [];
-  mode: String = 'grid';
-  sortBy: String = 'name';
+  mode: string = 'grid';
+  sortBy: string = 'name';
 
   constructor() { }
 

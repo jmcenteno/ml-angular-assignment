@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProductDetailsViewComponent implements OnInit {
 
   @Input() product: any;
-  @Input() category: String;
+  @Input() category: string;
   @Input() specs: any[];
 
   constructor() { }

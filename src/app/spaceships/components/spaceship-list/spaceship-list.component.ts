@@ -11,14 +11,14 @@ import { Spaceship } from '../../services/spaceships/spaceship';
 })
 export class SpaceshipListComponent implements OnInit {
 
-  products: Spaceship[] = [];
+  spaceships: Spaceship[] = [];
 
   constructor(
     private spaceshipsService: SpaceshipsService) { }
 
   ngOnInit() {
 
-    this.spaceshipsService.spaceships.subscribe(data => {
+    this.spaceshipsService.spaceships.subscribe((data: Spaceship[]) => {
 
       if (!data) {
 
@@ -26,7 +26,7 @@ export class SpaceshipListComponent implements OnInit {
 
       } else {
 
-        this.products = data || [];
+        this.spaceships = data || [];
 
       }
 
