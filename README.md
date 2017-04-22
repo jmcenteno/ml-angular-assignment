@@ -1,6 +1,30 @@
-# Angular
+# Magic Leap Front End Assignment - Angular
 
+Single Page Application built in Angular.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+
+## Getting started
+
+First, clone the project:
+
+```bash
+$ git clone https://bitbucket.org/jmcenteno/magic-leap-angular.git <my-project-name>
+$ cd <my-project-name>
+```
+
+Then, install dependencies:
+
+```bash
+$ npm install
+```
+
+Finally, start the application:
+
+```bash
+$ npm start
+```
+
+Go to `http://localhost:4200` on your browser to view the project.
 
 ## Development server
 
