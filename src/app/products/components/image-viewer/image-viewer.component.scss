@@ -4,8 +4,11 @@
     width: 100%;
 }
 
-.thumbnails a {
-    cursor: pointer;
+.thumbnails {
+    
+    a {
+        cursor: pointer;
+    }
     
     img {
         margin-bottom: 8px;

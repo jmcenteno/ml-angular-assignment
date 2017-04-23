@@ -8,11 +8,12 @@
   <div class="col-md-2 col-md-pull-10">
     
     <div class="thumbnails hidden-xs hidden-sm">
-      <ng-template ngFor let-img [ngForOf]="images" let-i="index">
+      <ng-template ngFor let-img [ngForOf]="images" let-i="index" *ngIf="images.length">
         <a (click)="current = i">
           <img [attr.src]="img || 'assets/img/no-img.jpg'" class="img-thumbnail img-responsive" [ngClass]="{ 'active': i === current }" />
         </a>
       </ng-template>
+      <img src="assets/img/no-img.jpg" class="img-thumbnail img-responsive active" *ngIf="!images.length" />
     </div>
 
   </div>
