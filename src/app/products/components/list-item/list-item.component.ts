@@ -22,7 +22,7 @@ import {
         transform: 'translateY(0)'
       })),
       transition('inactive => active', [
-        animate('300ms ease-out')
+        animate('300ms cubic-bezier(0.19, 1, 0.22, 1)')
       ])
     ])
   ]
