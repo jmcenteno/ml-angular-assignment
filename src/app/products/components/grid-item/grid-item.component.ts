@@ -23,7 +23,7 @@ import {
         transform: 'scale(1)'
       })),
       transition('inactive => active', [
-        animate('500ms ease')
+        animate('1s cubic-bezier(0.19, 1, 0.22, 1)')
       ])
     ])
   ]
