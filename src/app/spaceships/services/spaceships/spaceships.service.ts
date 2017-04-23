@@ -83,9 +83,10 @@ export class SpaceshipsService {
           spaceship.id = i;
           spaceship.name = item.name;
           spaceship.price = item.price;
-          spaceship.category = item.class;
+          spaceship.category = 'Spaceship';
           spaceship.manufacturer = item.manufacturer;
           spaceship.specs = item.techspecs;
+          spaceship.specs.class = item.class;
           spaceship.description = lipsum.getParagraph();
           spaceship.pictures = images.map((img) => img += '/300');
 

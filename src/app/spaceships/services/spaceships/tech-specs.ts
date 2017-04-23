@@ -1,4 +1,5 @@
 export class TechSpecs {
+    class: string;
     length: string;
     maxaccel: string;
     MGLT: string;

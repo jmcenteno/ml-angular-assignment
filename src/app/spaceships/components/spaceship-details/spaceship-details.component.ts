@@ -37,6 +37,7 @@ export class SpaceshipDetailsComponent implements OnInit {
             }
 
             this.specs = [
+              { label: 'Class', value: this.spaceship.specs.class },
               { label: 'Length', value: this.spaceship.specs.length },
               { label: 'Max Acceleration', value: this.spaceship.specs.maxaccel },
               { label: 'Megalights', value: this.spaceship.specs.MGLT },
