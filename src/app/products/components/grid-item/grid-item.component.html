@@ -5,6 +5,8 @@
   <div class="panel-body">
     <h3 class="panel-title">{{product.name}}</h3>
     <p class="lead">{{product.price || 'N/A'}}</p>
+  </div>
+  <div class="panel-footer">
     <a [routerLink]="product.id" class="btn btn-primary btn-block">View Details</a>
   </div>
 </div>
